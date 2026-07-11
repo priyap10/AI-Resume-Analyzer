@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #f4f7fb;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.logo-circle{
+    width:80px;
+    height:80px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:38px;
+    color:white;
+    box-shadow:0 8px 25px rgba(37,99,235,.35);
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.header p {
+  max-width: 700px;
+  margin: auto;
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.analyze-form {
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 30px;
+}
+
+@media(max-width:768px){
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+.field label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#334155;
+}
+
+.file-drop{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:180px;
+    border:2px dashed #cbd5e1;
+    border-radius:16px;
+    background:#f8fafc;
+    transition:.25s;
+    cursor:pointer;
+}
+
+.file-drop:hover{
+    background:#eff6ff;
+    border-color:#2563eb;
+}
+
+.file-name{
+    color:#2563eb;
+    font-weight:600;
+}
+
+textarea{
+    width:100%;
+    border:1px solid #d1d5db;
+    border-radius:14px;
+    background:white;
+    padding:16px;
+    font-size:15px;
+    color:#111827;
+    resize:vertical;
+    font-family:inherit;
+}
+
+textarea:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+}
+
+.error-box{
+    margin-top:20px;
+    background:#fee2e2;
+    border:1px solid #fecaca;
+    color:#b91c1c;
+    padding:15px;
+    border-radius:12px;
+}
+
+.button-row{
+    display:flex;
+    gap:15px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    border:none;
+    padding:14px 26px;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+.btn-primary{
+    background:linear-gradient(90deg,#2563eb,#4f46e5);
+    color:white;
+}
+.btn-primary:hover{
+    background:#1d4ed8;
+}
+
+.btn-secondary{
+    background:white;
+    color:#2563eb;
+    border:1px solid #2563eb;
+}
+
+.btn-secondary:hover{
+    background:#cbd5e1;
+}
+
+.results{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+    margin-top:35px;
+}
+
+@media(max-width:768px){
+    .results{
+        grid-template-columns:1fr;
+    }
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:24px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+}
+
+.card h3{
+    margin-top:0;
+    margin-bottom:16px;
+    color:#0f172a;
+}
+
+.card ul,
+.card ol{
+    margin:0;
+    padding-left:22px;
+}
+
+.card li{
+    margin-bottom:10px;
+    line-height:1.6;
+    color:#475569;
+}
+
+.score-card{
+    grid-column:span 2;
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+@media(max-width:768px){
+    .score-card{
+        grid-column:span 1;
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+.summary{
+    font-size:16px;
+    line-height:1.8;
+    color:#475569;
+}
+
+.pill-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.pill{
+    padding:8px 15px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.pill-good{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.pill-bad{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+.empty-note{
+    color:#94a3b8;
+    font-style:italic;
+}
+.file-drop h3{
+    margin:0;
+    color:#2563eb;
+}
+
+.file-drop p{
+    margin-top:8px;
+    color:#64748b;
+}
+.glass{
+    background:white;
+    border:1px solid #e5e7eb;
+}
+.footer{
+    text-align:center;
+    margin-top:60px;
+    color:#94a3b8;
+    font-size:14px;
+}
