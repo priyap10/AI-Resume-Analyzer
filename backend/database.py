@@ -1,6 +1,4 @@
-"""
-MongoDB connection + simple data access helpers for storing analysis history.
-"""
+
 import os
 from datetime import datetime, timezone
 from pymongo import MongoClient, DESCENDING

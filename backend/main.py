@@ -1,11 +1,3 @@
-"""
-AI Resume Analyzer — FastAPI backend
-
-Endpoints:
-  POST /api/analyze
-  POST /api/interview-questions
-  GET  /api/health
-"""
 
 from dotenv import load_dotenv
 load_dotenv()

@@ -1,9 +1,3 @@
-"""
-Wraps all calls to the AI model:
-1. ATS-style scoring + missing-skill detection + improvement suggestions
-2. Interview question generation
-"""
-
 import json
 import os
 import re
@@ -22,7 +16,6 @@ def _get_client():
 
 
 def _extract_json(raw_text: str) -> dict:
-    """Extract JSON even if it's wrapped in markdown code fences."""
     cleaned = re.sub(
         r"^```(json)?|```$",
         "",
@@ -100,10 +93,10 @@ Respond ONLY with valid JSON.
   "resume_specific_questions": []
 }}
 
-RESUME:
+
 {resume_text}
 
-JOB DESCRIPTION:
+
 {job_description}
 """
 

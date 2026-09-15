@@ -1,16 +1,8 @@
-"""
-PDF text extraction using PyMuPDF (fitz).
-Pulls plain text out of an uploaded resume PDF so it can be sent to the LLM.
-"""
-import fitz  # PyMuPDF
+import fitz
 from fastapi import HTTPException
 
 
 def extract_text_from_pdf(file_bytes: bytes) -> str:
-    """
-    Extract and return plain text from a PDF file's raw bytes.
-    Raises HTTPException if the PDF can't be read or has no extractable text.
-    """
     try:
         doc = fitz.open(stream=file_bytes, filetype="pdf")
     except Exception as exc:
